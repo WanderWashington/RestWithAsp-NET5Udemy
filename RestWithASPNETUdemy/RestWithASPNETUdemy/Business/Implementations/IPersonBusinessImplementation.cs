@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace RestWithASPNETUdemy.Business.Implementations
 {
-    public class IBookBusinessImplementation : IPersonBusiness
+    public class PersonBusinessImplementation : IPersonBusiness
     {
         private readonly IPersonRepository _repository;
 
-        public IBookBusinessImplementation(IBookRepository repository)
+        public PersonBusinessImplementation(IPersonRepository repository)
         {
             _repository = repository;
         }

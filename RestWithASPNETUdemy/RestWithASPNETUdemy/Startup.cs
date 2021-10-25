@@ -56,7 +56,9 @@ namespace RestWithASPNETUdemy
             services.AddApiVersioning();
 
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>(); //injeção de dependencia.
-            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>(); //injeção de dependencia.
+            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>(); 
+            services.AddScoped<IBookBusiness, BookBusinessImplementation>(); //injeção de dependencia.
+            services.AddScoped<IBookRepository, BookRepositoryImplementation>(); //injeção de dependencia.
         }
 
 
