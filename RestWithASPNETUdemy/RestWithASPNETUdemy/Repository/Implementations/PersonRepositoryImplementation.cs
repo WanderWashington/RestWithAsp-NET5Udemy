@@ -6,14 +6,14 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace RestWithASPNETUdemy.Services.Implementations
+namespace RestWithASPNETUdemy.Repository.Implementations
 {
-    public class PersonServiceImplementation : IPersonService
+    public class PersonRepositoryImplementation : IPersonRepository
     {
         private MySqlContext _context;
 
 
-        public PersonServiceImplementation(MySqlContext context)
+        public PersonRepositoryImplementation(MySqlContext context)
         {
             _context = context;
         }
@@ -86,7 +86,7 @@ namespace RestWithASPNETUdemy.Services.Implementations
 
         }
 
-        private bool Exists(long id)
+        public bool Exists(long id)
         {
             return _context.People.Any(p => p.Id.Equals(id));
         }
