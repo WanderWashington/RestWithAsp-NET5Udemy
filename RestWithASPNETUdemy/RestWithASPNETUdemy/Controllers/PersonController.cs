@@ -18,10 +18,10 @@ namespace RestWithASPNETUdemy.Controllers
         private readonly ILogger<PersonController> _logger;
         private IPersonBusiness _personBusiness;
 
-        public PersonController(ILogger<PersonController> logger, IPersonBusiness _personBusiness)
+        public PersonController(ILogger<PersonController> logger, IPersonBusiness personBusiness)
         {
             _logger = logger;
-            _personBusiness = _personBusiness;
+            _personBusiness = personBusiness;
         }
 
         [HttpGet("")]
