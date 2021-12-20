@@ -38,7 +38,11 @@ namespace RestWithASPNETUdemy.Controllers
                 return NotFound();
             return Ok(person);
         }        
-        
+        /// <summary>
+        /// Post Action
+        /// </summary>
+        /// <param name="person"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post([FromBody] Person person)
         {
